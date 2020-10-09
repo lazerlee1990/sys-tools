@@ -14,7 +14,7 @@ function App() {
       <Router>
         <div className="main-content">
           <SideNav />
-          <Suspense fallback={<h1>Loading...</h1>}>
+          <Suspense fallback={<h1 className="container">Loading...</h1>}>
             <Switch>
               <Route path='/' exact>
                 <Home />

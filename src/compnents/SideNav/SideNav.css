@@ -52,23 +52,28 @@ a {
     padding: 5px 15px;
     border-radius: 4px;
     margin-top: 25px;
+   
 }
 
 a:hover {
     cursor: pointer;
-    background: RGBA(97,218,251,0.38);
+    background: RGBA(97,218,251,0.9);
+    box-shadow: 10px 0px 19px -3px rgba(0,0,0,0.37);
    
 }
 a:active {
     background: RGBA(97,218,251,0.38);
     color: lightblue;
+    
 
 }
 
 .logo {
-    height: 15vmin;
+    max-height: 5vmin;
+    max-width: 5vmin;
     pointer-events: none;
     animation: App-logo-spin infinite 20s linear;
+    padding: 5px;
   }
   
   @keyframes App-logo-spin {
