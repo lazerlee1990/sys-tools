@@ -1,10 +1,7 @@
 
 nav {
-    display: flex;
-    flex-direction: column;
-    max-width: 12vh;
     min-height: 100vh;
-    min-width: max-content;
+    min-width: 15vh;
     background: RGBA(0,0,17,0.63);
     text-align: center;
     padding: 5px;
@@ -17,20 +14,33 @@ nav {
 .button-menu {
     display: flex;
     flex-direction: column;
+    padding-top: 20vh;
 }
 
-button {
+a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     min-height: 40px;
     background: none;
     border: none;
     border-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    padding: 5px;
+    border-radius: 4px;
+    margin-top: 5px;
 }
 
-button:hover {
+a:hover {
     cursor: pointer;
     background: RGBA(97,218,251,0.38);
+   
 }
-button:active {
+a:active {
     background: RGBA(97,218,251,0.38);
+    color: lightblue;
+
 }
 

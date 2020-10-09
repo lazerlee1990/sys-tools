@@ -1,18 +1,50 @@
-import React from 'react';
-import {Button} from '@material-ui/core'
+import React, {useEffect, useState} from 'react';
+import {
+  useLocation,
+  Link
+} from "react-router-dom";
+import HomeIcon from '@material-ui/icons/Home'
+import SettingsSystemDaydreamIcon from '@material-ui/icons/SettingsSystemDaydream';
+import LanguageIcon from '@material-ui/icons/Language';
+import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 import './SideNav.css';
 
+
+
 export default function SideNav() {
+    
+    const location = useLocation()
+    const [active, setActive] = useState(location.pathname)
+
+
+    const handleClick = (page) => {
+        switch(page) {
+            case 'home':
+                setActive('/')
+                break;
+            case 'system':
+                setActive('/system')
+                break;
+            case 'cron':
+                setActive('/cron')
+                break;
+            case 'apache':
+                setActive('/apache')
+                break;
+            default:
+                setActive('/home')
+                break;
+        }
+    }
 
   return (
     <nav >
-        <img src='/logo192.png' alt='logo' />
+        <img style={{maxHeight: "150px", maxWidth: "150px"}} src='/logo192.png' alt='logo' />
         <div className="button-menu">
-            <button>Home</button>
-            <button>Home</button>
-            <button>Home</button>
-            <button>Home</button>
-            <button>Home</button>
+            <Link style={{background: `${active === '/' ? "#61dafb" : ""}`}} to='/' onClick={() => handleClick("home")}><HomeIcon />Home </Link>
+            <Link style={{background: `${active === '/system' ? "#61dafb" : ""}`}} to='/system' onClick={() => handleClick("system")}><SettingsSystemDaydreamIcon /> System Logs</Link>
+            <Link style={{background: `${active === '/apache' ? "#61dafb" : ""}`}} to='/apache' onClick={() => handleClick("apache")}><LanguageIcon />Apache 2 Data</Link>
+            <Link style={{background: `${active === '/cron' ? "#61dafb" : ""}`}} to='/cron' onClick={() => handleClick("cron")}><AccessAlarmIcon />Cron Jobs</Link>
         </div>
     </nav>
   );
