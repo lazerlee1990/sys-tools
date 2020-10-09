@@ -1,0 +1,36 @@
+
+nav {
+    display: flex;
+    flex-direction: column;
+    max-width: 12vh;
+    min-height: 100vh;
+    min-width: max-content;
+    background: RGBA(0,0,17,0.63);
+    text-align: center;
+    padding: 5px;
+    -webkit-box-shadow: 10px 0px 19px -3px rgba(0,0,0,0.37);
+    -moz-box-shadow: 10px 0px 19px -3px rgba(0,0,0,0.37);
+    box-shadow: 10px 0px 19px -3px rgba(0,0,0,0.37);
+}
+
+
+.button-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    min-height: 40px;
+    background: none;
+    border: none;
+    border-style: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background: RGBA(97,218,251,0.38);
+}
+button:active {
+    background: RGBA(97,218,251,0.38);
+}
+
