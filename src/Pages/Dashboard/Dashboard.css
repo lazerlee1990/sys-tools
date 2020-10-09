@@ -1,0 +1,16 @@
+.top-cards-container {
+    display: flex;
+   
+    max-height: 20vh;
+
+  
+}
+
+.MuiCardActions-root {
+    justify-content: center;
+    position: relative;
+}
+
+.MuiPaper-root.MuiCard-root.MuiPaper-elevation1.MuiPaper-rounded {
+    margin: 12px;
+}
