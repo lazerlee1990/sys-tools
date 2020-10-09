@@ -26,12 +26,9 @@ nav {
   min-height: 5vh;
   min-width: 5vh;
   justify-content: center;
-  align-items: center;
+
   font-size: larger;
   box-shadow: 10px 0px 19px -3px rgba(0,0,0,0.37);
-}
-.drop-in:hover {
-  cursor: pointer;
 }
 
 .drop-container {
@@ -64,8 +61,6 @@ a:hover {
 a:active {
     background: RGBA(97,218,251,0.38);
     color: lightblue;
-    
-
 }
 
 .logo {
@@ -85,3 +80,21 @@ a:active {
     }
   }
   
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  color: white;
+  border-radius: 4px;
+  min-height: 60px;
+  max-width: 100%;
+
+}
+
+.arrow-container:hover {
+  cursor: pointer;
+  background: RGBA(97,218,251,0.9);
+  box-shadow: 10px 0px 19px -3px rgba(0,0,0,0.37);
+
+}

@@ -7,6 +7,7 @@ import HomeIcon from '@material-ui/icons/Home'
 import SettingsSystemDaydreamIcon from '@material-ui/icons/SettingsSystemDaydream';
 import LanguageIcon from '@material-ui/icons/Language';
 import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import './SideNav.css';
 
 
@@ -46,21 +47,35 @@ export default function SideNav() {
 
   return (
     <>
-    <div onClick={() => handleShrink()} className="drop-in" style={{zIndex: "100"}}></div>
+    <div  className="drop-in" style={{zIndex: "100"}}>
+        <div>
+            <div className="arrow-container">
+                <ArrowBackIcon />
+            </div>
+            <div style={{paddingTop: "125px"}}>
+                <Link to='/'>
+                    <HomeIcon style={{padding: "12px"}}/>
+                </Link>
+                <Link to='/system'>
+                    <SettingsSystemDaydreamIcon style={{padding: "12px"}}/>
+                </Link>
+            </div>
+        </div>
+    </div>
     <nav style={{transform: shrink ?  "translateX(-100%)" : "none"}}>
-        <hr class="solid" />
+        <hr className="solid" />
         <div style={{display: "flex"}}> 
             <img className="logo"  src='/logo192.png' alt='logo' />
             <p style={{color: "white"}}>Firstnet <br />UI Designs</p>
            
         </div>
-        <hr class="solid" />
+        <hr className="solid" />
         
         <div className="button-menu">
-            <Link style={{background: `${active === '/' ? "#61dafb" : ""}`}} to='/' onClick={() => handlePageChange("home")}><HomeIcon style={{padding: "12px"}}/>Home </Link>
-            <Link style={{background: `${active === '/system' ? "#61dafb" : ""}`}} to='/system' onClick={() => handlePageChange("system")}><SettingsSystemDaydreamIcon style={{padding: "12px"}}/> System Logs</Link>
-            <Link style={{background: `${active === '/apache' ? "#61dafb" : ""}`}} to='/apache' onClick={() => handlePageChange("apache")}><LanguageIcon style={{padding: "12px"}}/>Apache 2</Link>
-            <Link style={{background: `${active === '/cron' ? "#61dafb" : ""}`}} to='/cron' onClick={() => handlePageChange("cron")}>{<AccessAlarmIcon style={{padding: "12px"}}/>}  Cron Jobs</Link>
+            <Link style={{background: `${active === '/' ? "#61dafb" : ""}`, boxShadow: `${active === '/' ? "10px 0px 19px -3px rgba(0,0,0,0.37)" : "none"}`}} to='/' onClick={() => handlePageChange("home")}><HomeIcon style={{padding: "12px"}}/>Home </Link>
+            <Link style={{background: `${active === '/system' ? "#61dafb" : ""}`, boxShadow: `${active === '/system' ? "10px 0px 19px -3px rgba(0,0,0,0.37)" : "none"}`}} to='/system' onClick={() => handlePageChange("system")}><SettingsSystemDaydreamIcon style={{padding: "12px"}}/> System Logs</Link>
+            <Link style={{background: `${active === '/apache' ? "#61dafb" : ""}`, boxShadow: `${active === '/apache' ? "10px 0px 19px -3px rgba(0,0,0,0.37)" : "none"}`}} to='/apache' onClick={() => handlePageChange("apache")}><LanguageIcon style={{padding: "12px"}}/>Apache 2</Link>
+            <Link style={{background: `${active === '/cron' ? "#61dafb" : ""}`, boxShadow: `${active === '/cron' ? "10px 0px 19px -3px rgba(0,0,0,0.37)" : "none"}`}} to='/cron' onClick={() => handlePageChange("cron")}>{<AccessAlarmIcon style={{padding: "12px"}}/>}  Cron Jobs</Link>
         </div>
     </nav>
 </>
