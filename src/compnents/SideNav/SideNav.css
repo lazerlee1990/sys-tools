@@ -7,7 +7,8 @@ nav {
     -webkit-box-shadow: 10px 0px 19px -3px rgba(0,0,0,0.37);
     -moz-box-shadow: 10px 0px 19px -3px rgba(0,0,0,0.37);
     box-shadow: 10px 0px 19px -3px rgba(0,0,0,0.37);
-    transition-duration: 400ms;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(1,.81,.79,.71);
     min-width: fit-content;
 }
 

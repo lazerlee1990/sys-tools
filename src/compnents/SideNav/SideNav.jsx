@@ -43,10 +43,6 @@ export default function SideNav() {
         setShrink(!shrink)
         setHidden(!hidden)
     }
-    const handleGrow = () => {
-        setShrink(!shrink)
-        setHidden(!hidden)
-    }
 
   return (
     <>

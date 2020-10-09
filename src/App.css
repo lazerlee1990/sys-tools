@@ -19,3 +19,8 @@
   color: #61dafb;
 }
 
+.container {
+  display: flex;
+  min-width: 80%;
+  justify-content: center;
+}
