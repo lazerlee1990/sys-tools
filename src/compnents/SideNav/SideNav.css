@@ -3,7 +3,7 @@ nav {
     min-height: 100vh;
     background: RGBA(0,0,17,0.63);
     text-align: center;
-    padding: 5px;
+    padding: 15px;
     -webkit-box-shadow: 10px 0px 19px -3px rgba(0,0,0,0.37);
     -moz-box-shadow: 10px 0px 19px -3px rgba(0,0,0,0.37);
     box-shadow: 10px 0px 19px -3px rgba(0,0,0,0.37);
@@ -21,7 +21,7 @@ nav {
 
 .drop-in {
   display: flex;
-  background: rgb(97, 218, 251);
+  background: #475469;
   padding: 5px;
   min-height: 5vh;
   min-width: 5vh;
@@ -49,7 +49,7 @@ a {
     text-decoration: none;
     color: white;
     font-size: large;
-    padding: 5px;
+    padding: 5px 15px;
     border-radius: 4px;
     margin-top: 25px;
 }

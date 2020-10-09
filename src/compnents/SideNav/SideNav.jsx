@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import {
   useLocation,
   Link
@@ -55,7 +55,7 @@ export default function SideNav() {
         <div className="button-menu">
             <Link style={{background: `${active === '/' ? "#61dafb" : ""}`}} to='/' onClick={() => handlePageChange("home")}><HomeIcon style={{padding: "7px"}}/>Home </Link>
             <Link style={{background: `${active === '/system' ? "#61dafb" : ""}`}} to='/system' onClick={() => handlePageChange("system")}><SettingsSystemDaydreamIcon style={{padding: "7px"}}/> System Logs</Link>
-            <Link style={{background: `${active === '/apache' ? "#61dafb" : ""}`}} to='/apache' onClick={() => handlePageChange("apache")}><LanguageIcon style={{padding: "7px"}}/>Apache 2 Data</Link>
+            <Link style={{background: `${active === '/apache' ? "#61dafb" : ""}`}} to='/apache' onClick={() => handlePageChange("apache")}><LanguageIcon style={{padding: "7px"}}/>Apache 2</Link>
             <Link style={{background: `${active === '/cron' ? "#61dafb" : ""}`}} to='/cron' onClick={() => handlePageChange("cron")}>{<AccessAlarmIcon style={{padding: "7px"}}/>}  Cron Jobs</Link>
         </div>
     </nav>
