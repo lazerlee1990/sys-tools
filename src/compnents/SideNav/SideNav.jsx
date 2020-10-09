@@ -18,7 +18,7 @@ export default function SideNav() {
     const [active, setActive] = useState(location.pathname)
     const [shrink, setShrink] = useState(false)
     const [hidden, setHidden] = useState(false)
-
+    const [arrow, setArrow] = useState("rotate(0deg)")
 
     const handlePageChange = (page) => {
         switch(page) {
@@ -43,16 +43,22 @@ export default function SideNav() {
     const handleShrink = () => {
         setShrink(!shrink)
         setHidden(!hidden)
+        if (arrow === 'rotate(0deg)') {
+            setArrow('rotate(180deg)')
+        } else {
+            setArrow('rotate(0deg)')
+        }
+        
     }
 
   return (
     <>
     <div  className="drop-in" style={{zIndex: "100"}}>
         <div>
-            <div className="arrow-container">
-                <ArrowBackIcon />
+            <div onClick={() => handleShrink()} className="arrow-container">
+                <ArrowBackIcon style={{transform: arrow}}/>
             </div>
-            <div style={{paddingTop: "125px"}}>
+            <div className="link-container" style={{paddingTop: "125px", opacity: `${hidden  ? "1" : "0"}`}}>
                 <Link to='/'>
                     <HomeIcon style={{padding: "12px"}}/>
                 </Link>

@@ -60,7 +60,6 @@ a:hover {
 }
 a:active {
     background: RGBA(97,218,251,0.38);
-    color: lightblue;
 }
 
 .logo {
@@ -82,6 +81,7 @@ a:active {
   
 .arrow-container {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
@@ -97,4 +97,15 @@ a:active {
   background: RGBA(97,218,251,0.9);
   box-shadow: 10px 0px 19px -3px rgba(0,0,0,0.37);
 
+}
+
+.link-container {
+  transition-duration: 400ms;
+}
+.nothidden {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0
 }
