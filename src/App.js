@@ -3,7 +3,9 @@ import './App.css';
 import SideNav from './compnents/SideNav/SideNav'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
-const Home = lazy(() => import('./Pages/Home/Home'));
+
+const Dashboard = lazy(() => import('./Pages/Dashboard/Dashboard'));
+const Account = lazy(() => import('./Pages/Account/Account'));
 const System = lazy(() => import('./Pages/System/System'));
 const Cron = lazy(() => import('./Pages/Cron/Cron'));
 const Apache = lazy(() => import('./Pages/Apache/Apache'));
@@ -17,7 +19,10 @@ function App() {
           <Suspense fallback={<h1 className="container">Loading...</h1>}>
             <Switch>
               <Route path='/' exact>
-                <Home />
+                <Dashboard />
+              </Route>
+              <Route path='/account' exact>
+                <Account />
               </Route>
               <Route path='/system' exact>
                 <System />

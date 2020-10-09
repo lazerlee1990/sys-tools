@@ -3,11 +3,12 @@ import {
   useLocation,
   Link
 } from "react-router-dom";
-import HomeIcon from '@material-ui/icons/Home'
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import SettingsSystemDaydreamIcon from '@material-ui/icons/SettingsSystemDaydream';
 import LanguageIcon from '@material-ui/icons/Language';
 import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import DashboardIcon from '@material-ui/icons/Dashboard';
 import './SideNav.css';
 
 
@@ -33,6 +34,9 @@ export default function SideNav() {
                 break;
             case 'apache':
                 setActive('/apache')
+                break;
+            case 'account':
+                setActive('/account')
                 break;
             default:
                 setActive('/home')
@@ -60,15 +64,18 @@ export default function SideNav() {
             </div>
             <div className="link-container" style={{paddingTop: "125px", opacity: `${hidden  ? "1" : "0"}`, pointerEvents: `${hidden ? "all" : "none"}`}}>
                 <Link to='/'>
-                    <HomeIcon style={{padding: "12px"}}/>
+                    <DashboardIcon style={{padding: "12px"}}/>
+                </Link>
+                <Link to='/account'>
+                    <AccountCircleIcon style={{padding: "12px"}}/>
                 </Link>
                 <Link to='/system'>
                     <SettingsSystemDaydreamIcon style={{padding: "12px"}}/>
                 </Link>
-                <Link to='/system'>
+                <Link to='/apache'>
                     <LanguageIcon style={{padding: "12px"}}/>
                 </Link>
-                <Link to='/system'>
+                <Link to='/cron'>
                     <AccessAlarmIcon style={{padding: "12px"}}/>
                 </Link>
             </div>
@@ -84,10 +91,12 @@ export default function SideNav() {
         <hr className="solid" />
         
         <div className="button-menu">
-            <Link style={{background: `${active === '/' ? "#61dafb" : ""}`, boxShadow: `${active === '/' ? "10px 0px 19px -3px rgba(0,0,0,0.37)" : "none"}`}} to='/' onClick={() => handlePageChange("home")}><HomeIcon style={{padding: "12px"}}/>Home </Link>
+            <Link style={{background: `${active === '/' ? "#61dafb" : ""}`, boxShadow: `${active === '/' ? "10px 0px 19px -3px rgba(0,0,0,0.37)" : "none"}`}} to='/' onClick={() => handlePageChange("home")}><DashboardIcon style={{padding: "12px"}}/>Dashboard</Link>
+            <Link style={{background: `${active === '/account' ? "#61dafb" : ""}`, boxShadow: `${active === '/account' ? "10px 0px 19px -3px rgba(0,0,0,0.37)" : "none"}`}} to='/account' onClick={() => handlePageChange("account")}>{<AccountCircleIcon style={{padding: "12px"}}/>} User Profile</Link>
             <Link style={{background: `${active === '/system' ? "#61dafb" : ""}`, boxShadow: `${active === '/system' ? "10px 0px 19px -3px rgba(0,0,0,0.37)" : "none"}`}} to='/system' onClick={() => handlePageChange("system")}><SettingsSystemDaydreamIcon style={{padding: "12px"}}/> System Logs</Link>
             <Link style={{background: `${active === '/apache' ? "#61dafb" : ""}`, boxShadow: `${active === '/apache' ? "10px 0px 19px -3px rgba(0,0,0,0.37)" : "none"}`}} to='/apache' onClick={() => handlePageChange("apache")}><LanguageIcon style={{padding: "12px"}}/>Apache 2</Link>
             <Link style={{background: `${active === '/cron' ? "#61dafb" : ""}`, boxShadow: `${active === '/cron' ? "10px 0px 19px -3px rgba(0,0,0,0.37)" : "none"}`}} to='/cron' onClick={() => handlePageChange("cron")}>{<AccessAlarmIcon style={{padding: "12px"}}/>}  Cron Jobs</Link>
+            
         </div>
     </nav>
 </>

@@ -68,6 +68,7 @@ a:active {
     pointer-events: none;
     animation: App-logo-spin infinite 20s linear;
     padding: 5px;
+    margin-top: 11px;
   }
   
   @keyframes App-logo-spin {

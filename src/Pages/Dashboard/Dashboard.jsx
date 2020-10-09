@@ -1,10 +1,10 @@
 import React from 'react';
-import './Home.css';
+import './Dashboard.css';
 
-export default function Home() {
+export default function Dashboard() {
     return (
         <div className="container">
-            <h1>Home</h1>
+            <h1>Dashboard</h1>
         </div>
     )
 }
