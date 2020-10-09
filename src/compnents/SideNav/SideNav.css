@@ -14,7 +14,7 @@ nav {
 .button-menu {
     display: flex;
     flex-direction: column;
-    padding-top: 20vh;
+    padding-top: 10vh;
 }
 
 a {
@@ -30,7 +30,7 @@ a {
     font-size: large;
     padding: 5px;
     border-radius: 4px;
-    margin-top: 5px;
+    margin-top: 25px;
 }
 
 a:hover {
