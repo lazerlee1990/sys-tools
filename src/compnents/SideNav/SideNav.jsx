@@ -58,12 +58,18 @@ export default function SideNav() {
             <div onClick={() => handleShrink()} className="arrow-container">
                 <ArrowBackIcon style={{transform: arrow}}/>
             </div>
-            <div className="link-container" style={{paddingTop: "125px", opacity: `${hidden  ? "1" : "0"}`}}>
+            <div className="link-container" style={{paddingTop: "125px", opacity: `${hidden  ? "1" : "0"}`, pointerEvents: `${hidden ? "all" : "none"}`}}>
                 <Link to='/'>
                     <HomeIcon style={{padding: "12px"}}/>
                 </Link>
                 <Link to='/system'>
                     <SettingsSystemDaydreamIcon style={{padding: "12px"}}/>
+                </Link>
+                <Link to='/system'>
+                    <LanguageIcon style={{padding: "12px"}}/>
+                </Link>
+                <Link to='/system'>
+                    <AccessAlarmIcon style={{padding: "12px"}}/>
                 </Link>
             </div>
         </div>
